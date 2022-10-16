@@ -3,8 +3,14 @@ from django.http import HttpResponse
 
 
 def index(response):
-    return HttpResponse('Hello there!')
+    return render(response, 'App/base.html', {
+        'content': 'Podstawowa strona',
+        'button_text': 'Dodatkowa strona',
+    })
 
 
 def testing_view(response):
-    return HttpResponse('<h1> that a view alright! </h1>')
+    return render(response, 'App/view1.html', {
+        'content': 'Strona dodatkowa',
+        'button_text': 'Podstawowa strona',
+    })
