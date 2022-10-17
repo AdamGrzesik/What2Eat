@@ -1,9 +1,13 @@
+<!DOCTYPE html>
+{% load static %}
+
 <html>
 <head>
     <title>Our website</title>
 </head>
 <body>
     <p>{{content}}</p>
+    <img src="{% static 'App/img/test1.jpg' %}" alt="test1" width="200" height="200">
 <div style="" class="button-box" >
     <button><a href="/view">{{button_text}}</a></button>
 </div>
