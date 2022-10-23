@@ -1,16 +1,23 @@
 from django.shortcuts import render
-from django.http import HttpResponse
 
 
 def index(response):
     return render(response, 'App/base.html', {
-        'content': 'Podstawowa strona',
-        'button_text': 'Dodatkowa strona',
     })
 
 
-def testing_view(response):
-    return render(response, 'App/view1.html', {
+def homepage(response):
+    return render(response, 'App/home.html', {
         'content': 'Strona dodatkowa',
         'button_text': 'Podstawowa strona',
+    })
+
+
+def recipe(response):
+    return render(response, 'App/recipe.html', {
+    })
+
+
+def copyrights(response):
+    return render(response, 'App/copyrights.html', {
     })

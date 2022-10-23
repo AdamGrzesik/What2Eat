@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+{% extends 'App/base.html' %}
+{% load static %}
+
+{% block content %}
+    <form method="post" action="recipe/">
+        {% csrf_token %}
+        <ul>
+            <li><input type="checkbox" value="owned" name="TBA1">TBA1</li>
+            <li><input type="checkbox" value="owned" name="TBA2">TBA2</li>
+            <li><input type="checkbox" value="owned" name="TBA3">TBA3</li>
+        </ul>
+    </form>
+{% endblock %}
