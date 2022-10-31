@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-
+# Deklarujemy funkcje które odpowiadają za renderowanie stron
 def index(response):
     return render(response, 'App/base.html', {
     })

@@ -3,12 +3,24 @@
 {% load static %}
 
 {% block content %}
-    <form method="post" action="recipe/">
-        {% csrf_token %}
-        <ul>
-            <li><input type="checkbox" value="owned" name="TBA1">TBA1</li>
-            <li><input type="checkbox" value="owned" name="TBA2">TBA2</li>
-            <li><input type="checkbox" value="owned" name="TBA3">TBA3</li>
-        </ul>
-    </form>
+<form method="post" action="recipe/">
+    {% csrf_token %}
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <div class="input-group-text">
+                <input type="checkbox">
+            </div>
+        </div>
+        <label class="form-control">Przykładowy produkt1</label>
+    </div>
+
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <div class="input-group-text">
+                <input type="checkbox">
+            </div>
+        </div>
+        <label class="form-control">Przykładowy produkt2</label>
+    </div>
+</form>
 {% endblock %}

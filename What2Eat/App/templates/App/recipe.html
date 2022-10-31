@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 {% extends 'App/base.html' %}
 {% load static %}
-<!--kod w  jest {} -->
+
 {% block content %}
     <form method="post" action="/">
         {% csrf_token %}
         <a href="https://en.wikipedia.org/wiki/Apple">
          <img alt="apl" src="{% static 'App/img/apple.png' %}" width=300" height="300">
         </a>
-        <h3>Japko</h3>
+        <h3>apple</h3>
         <ul>
-            <li>nusz</li>
-            <li>japko</li>
+            <li>apple</li>
+            <li>(optional) knife</li>
         </ul>
         <p>
-            bierzesz nusz i kroisz japko (opcjonalne)
+            grab a knife and cut apple
         </p>
     </form>
 {% endblock %}

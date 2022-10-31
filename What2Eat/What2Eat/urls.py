@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+# Tutaj tworzymy ścieżki strony i odsyłamy do urls danej aplikacji
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('App.urls')),
