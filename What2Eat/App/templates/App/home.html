@@ -3,24 +3,15 @@
 {% load static %}
 
 {% block content %}
-<form method="post" action="recipe/">
     {% csrf_token %}
+    {% for item in products %}
     <div class="input-group mb-3">
+        <label class="form-control">{{item.name}}</label>
         <div class="input-group-prepend">
             <div class="input-group-text">
                 <input type="checkbox">
             </div>
         </div>
-        <label class="form-control">Przykładowy produkt1</label>
     </div>
-
-    <div class="input-group">
-        <div class="input-group-prepend">
-            <div class="input-group-text">
-                <input type="checkbox">
-            </div>
-        </div>
-        <label class="form-control">Przykładowy produkt2</label>
-    </div>
-</form>
+    {% endfor %}
 {% endblock %}
