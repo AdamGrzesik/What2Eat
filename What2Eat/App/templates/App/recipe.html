@@ -3,18 +3,19 @@
 {% load static %}
 
 {% block content %}
-    <form method="post" action="/">
-        {% csrf_token %}
-        <a href="https://en.wikipedia.org/wiki/Apple">
-         <img alt="apl" src="{% static 'App/img/apple.png' %}" width=300" height="300">
-        </a>
-        <h3>apple</h3>
-        <ul>
-            <li>apple</li>
-            <li>(optional) knife</li>
-        </ul>
-        <p>
-            grab a knife and cut apple
-        </p>
-    </form>
+    {% csrf_token %}
+    <h3>{{recipe.name}}</h3><br>
+    {% for item in products_quan %}
+    <ul>
+        <li>{{item.name}}</li>
+    </ul>
+    {% endfor %}
+    {% for item in products_nonquan %}
+    <ul>
+        <li>{{item.name}}</li>
+    </ul>
+    {% endfor %}
+    <br><p>
+    {{recipe.description}}
+    </p>
 {% endblock %}
