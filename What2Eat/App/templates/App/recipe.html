@@ -1,24 +1,22 @@
 <!DOCTYPE html>
 {% extends 'App/base.html' %}
 {% load static %}
-{% load index %}
-{{ req|index:x }}
+
 
 {% block content %}
     {% csrf_token %}
-    <h3>{{recipe.name}}</h3><br>
-    {% for item in products_quan %}
-    <ul>
-        <li>{{req|index:forloop.counter0}} {{item.name}}</li>
-    </ul>
-    {% endfor %}
-    {% for item in products_nonquan %}
+    <h3>{{recipe.name}}</h3>
+    <p><i><small>
+        Tags: {{recipe.tags}}
+    </small></i></p>
+    <br>
+{% for item in products %}
     <ul>
         <li>{{item.name}}</li>
     </ul>
-    {% endfor %}
+{% endfor %}
     <br>
-    <p>
+    <p class="indent">
         {{recipe.description}}
     </p>
 {% endblock %}

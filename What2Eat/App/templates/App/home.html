@@ -5,15 +5,7 @@
 {% block content %}
     <form method="post" action="">
         {% csrf_token %}
-    {% for item in products_quan %}
-    <div class="itemwrapper mb-3">
-        <div class="text ml-3" label for="name">{{item.name}}</div>
-        <div class="number-input mr-4">
-            <input class="quantity" min="0" max="99" name="q{{item.id}}" value="0" type="number">
-        </div>
-    </div>
-    {% endfor %}
-    {% for item in products_nonquan %}
+    {% for item in products %}
     <div class="itemwrapper mb-3">
         <div class="text ml-3" label for="name">{{item.name}}</div>
         <div class="box-input mr-4">
