@@ -5,3 +5,4 @@ from . import models
 admin.site.register(models.ProductsQuan)
 admin.site.register(models.ProductsNonQuan)
 admin.site.register(models.Recipe)
+admin.site.register(models.Requirement)

@@ -20,8 +20,17 @@ class ProductsNonQuan(models.Model):
 class Recipe(models.Model):
     name = models.CharField(max_length=50)
     description = models.TextField(default='nic')
-    products = models.ManyToManyField(ProductsQuan)
-    products_non = models.ManyToManyField(ProductsNonQuan)
+    products = models.ManyToManyField(ProductsQuan, blank=True)
+    products_non = models.ManyToManyField(ProductsNonQuan, blank=True)
 
+    def __str__(self):
+        return self.name
+
+
+class Requirement(models.Model):
+    recipe = models.ForeignKey(Recipe, on_delete=models.DO_NOTHING)
+    product = models.ForeignKey(ProductsQuan, on_delete=models.DO_NOTHING)
+    requirement = models.IntegerField(default=0)
+    name = "Requirement"
     def __str__(self):
         return self.name
