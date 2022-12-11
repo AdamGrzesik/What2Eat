@@ -11,7 +11,7 @@ class Product(models.Model):
 
 class Recipe(models.Model):
     name = models.CharField(max_length=50)
-    description = models.TextField(default='nci')
+    description = models.TextField(default='Lorem ipsum')
     tags = models.JSONField(default=['tag1','tag2','tag3','tag4'])
     products = models.ManyToManyField(Product, related_name='products', blank=True)
 
