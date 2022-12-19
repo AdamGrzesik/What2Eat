@@ -37,5 +37,4 @@ def recipe(response):
 
 
 def copyrights(response):
-    search()
     return render(response, 'App/copyrights.html')
