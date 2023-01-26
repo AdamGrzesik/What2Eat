@@ -2,7 +2,6 @@ from django.shortcuts import render
 from . import models
 from .engine import search
 
-
 # Deklarujemy funkcje które odpowiadają za renderowanie stron
 def index(response):
     return render(response, 'App/base.html')
@@ -22,6 +21,7 @@ def homepage(response):
                 else:
                     item.owned = False
                 item.save()
+
     return render(response, 'App/home.html', context)
 
 
@@ -37,4 +37,5 @@ def recipe(response):
 
 
 def copyrights(response):
+    search()
     return render(response, 'App/copyrights.html')
