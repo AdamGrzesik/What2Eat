@@ -15,6 +15,5 @@ class Recipe(models.Model):
     tags = models.JSONField(default=["breakfast/lunch/dinner", "dietetic/greasy", "easy/medium/hard", "vegetarian/vegan"])
     products = models.ManyToManyField(Product, related_name='products', blank=True)
 
-
     def __str__(self):
         return self.name

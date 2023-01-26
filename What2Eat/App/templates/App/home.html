@@ -3,7 +3,7 @@
 {% load static %}
 
 {% block content %}
-    <form method="post" action="">
+    <form method="POST" action="">
         {% csrf_token %}
     {% for item in products %}
     <div class="itemwrapper mb-3">
